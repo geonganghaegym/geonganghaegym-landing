@@ -9,6 +9,32 @@ import { appConfig } from '@/config';
 import { Typography } from '@/lib/mixin';
 import { cn } from '@/lib/utils';
 
+// 랜딩 본문에 이미 있는 기능 설명만 옮긴다. 가격·지원 기기처럼 확정되지 않은 내용은 넣지 않는다.
+const faqs = [
+  {
+    question: '건강해짐은 어떤 앱인가요?',
+    answer:
+      '피트니스 센터, 트레이너와 회원을 위한 PT 관리 앱이에요. 수업 스케줄, 회원과 수강권, 수업 피드백을 한곳에서 관리해요.',
+  },
+  {
+    question: 'PT 일정 예약과 변경은 어떻게 하나요?',
+    answer: '복잡한 스케줄 관리를 자동화해 일정 예약, 변경, 취소를 앱에서 간편하게 처리할 수 있어요.',
+  },
+  {
+    question: '회원이 예고 없이 수업에 오지 않으면 어떻게 되나요?',
+    answer: '예약 정책에 따른 사전 취소 없이 결석하면 시스템이 수강권 횟수를 자동으로 차감해요.',
+  },
+  {
+    question: '회원별로 어떤 기록을 남길 수 있나요?',
+    answer:
+      '회원별 진행 상황과 수강권 이용 내역을 한눈에 볼 수 있고, 수업일지·식단·운동기록으로 회원에게 피드백을 남길 수 있어요.',
+  },
+  {
+    question: '회원 참여를 높이는 기능이 있나요?',
+    answer: '포인트 리워드 제도와 헬스장별 커뮤니티로 회원 간 유대감과 장기적인 고객 충성도를 높일 수 있어요.',
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -148,6 +174,25 @@ export default function Home() {
                 고객 충성도를 높여요.
               </p>
             </div>
+          </div>
+        </section>
+        <section className='h-fit w-full bg-white px-10 pt-[80px] lg:pt-[120px]'>
+          <div className='m-auto max-w-[1140px]'>
+            <h2 className='mb-[24px] text-center text-[24px] font-bold text-black lg:mb-[48px] lg:text-left lg:text-[48px]'>
+              자주 묻는 질문
+            </h2>
+            <dl className='divide-y divide-[#E4E5E7] border-y border-[#E4E5E7]'>
+              {faqs.map(({ question, answer }) => (
+                <div key={question} className='py-[20px] lg:py-[28px]'>
+                  <dt className='mb-[8px] text-[16px] font-bold text-black lg:text-[22px]'>
+                    {question}
+                  </dt>
+                  <dd className='text-[14px] font-medium text-[#4C4E52] lg:text-[18px]'>
+                    {answer}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </section>
       </main>
