@@ -1,5 +1,5 @@
 export const siteConfig = {
-  title: '건강해짐',
+  title: '건강해짐 - PT 일정·회원 관리 앱',
   name: '건강해짐',
   url: 'https://landing.geonganghaegym.junghaebom.com',
   ogImage: '/images/banner.png',
