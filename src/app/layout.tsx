@@ -71,6 +71,11 @@ export const metadata: Metadata = {
     },
   },
   manifest: `${siteConfig.url}/site.webmanifest`,
+  verification: {
+    other: {
+      'naver-site-verification': '11a9c6a444b2b684a14b809a29c86c52afebe2bf',
+    },
+  },
 };
 
 export const viewport: Viewport = {
