@@ -33,7 +33,7 @@ export default function Home() {
               </div>
             </div>
             <img
-              src='/images/landing-section-01.png'
+              src='/images/landing-section-01.webp'
               alt='건강해짐 앱의 트레이너 홈 화면'
               className='relative w-[342px] lg:absolute lg:bottom-0 lg:right-0 lg:w-fit'
             />
@@ -42,7 +42,7 @@ export default function Home() {
         <section className='h-fit w-full bg-[#EEF7FF]  px-10 pt-[50px] lg:h-[750px] lg:pt-0'>
           <div className='m-auto flex h-full max-w-[1140px] flex-col-reverse items-center lg:flex-row lg:items-end lg:justify-between'>
             <img
-              src='/images/landing-section-02.png'
+              src='/images/landing-section-02.webp'
               alt='PT 일정 예약·변경·취소를 관리하는 스케줄 화면'
               className='w-[360px] lg:w-fit'
             />
@@ -77,7 +77,7 @@ export default function Home() {
               </p>
             </div>
             <img
-              src='/images/landing-section-03.png'
+              src='/images/landing-section-03.webp'
               alt='노쇼 시 수강권 횟수가 자동 차감되는 예약 정책 화면'
               className='w-[360px] lg:w-fit'
             />
@@ -86,7 +86,7 @@ export default function Home() {
         <section className='h-fit w-full bg-[#EEF7FF]  px-10 pt-[50px] lg:h-[750px] lg:pt-0'>
           <div className='m-auto flex h-full max-w-[1140px] flex-col-reverse items-center lg:flex-row lg:items-end lg:justify-between'>
             <img
-              src='/images/landing-section-04.png'
+              src='/images/landing-section-04.webp'
               alt='회원별 진행 상황과 수강권 이용 내역을 보는 회원 관리 화면'
               className='w-[360px] lg:w-fit'
             />
@@ -120,7 +120,7 @@ export default function Home() {
               </p>
             </div>
             <img
-              src='/images/landing-section-05.png'
+              src='/images/landing-section-05.webp'
               alt='수업일지·식단·운동기록을 남기는 회원 피드백 화면'
               className='w-[360px] lg:w-fit'
             />
@@ -129,7 +129,7 @@ export default function Home() {
         <section className='h-fit w-full bg-[#EEF7FF]  px-10 pt-[50px] lg:h-[750px] lg:pt-0'>
           <div className='m-auto flex h-full max-w-[1140px] flex-col-reverse items-center lg:flex-row lg:items-end lg:justify-between'>
             <img
-              src='/images/landing-section-06.png'
+              src='/images/landing-section-06.webp'
               alt='포인트 리워드와 헬스장 커뮤니티 화면'
               className='w-[360px] lg:w-fit'
             />
@@ -166,14 +166,14 @@ export default function Home() {
               href={appConfig.termsLink}
               passHref={true}
               target='_blank'
-              className='text-[15px] font-medium text-[#86888D] underline'>
+              className='text-[15px] font-medium text-[#6B6D72] underline'>
               서비스 이용약관
             </Link>
             <Link
               href={appConfig.privacyLink}
               passHref={true}
               target='_blank'
-              className='ml-[12px] text-[15px] font-medium text-[#86888D] underline'>
+              className='ml-[12px] text-[15px] font-medium text-[#6B6D72] underline'>
               개인정보 처리방침
             </Link>
           </div>
