@@ -34,7 +34,7 @@ const Header = () => {
       <nav
         className='mx-auto flex max-w-[1140px] items-center justify-between px-10 py-4'
         aria-label='Global'>
-        <h1 className={cn(Typography.HEADING_1, 'text-white')}>건강해짐</h1>
+        <p className={cn(Typography.HEADING_1, 'text-white')}>건강해짐</p>
       </nav>
     </header>
   );

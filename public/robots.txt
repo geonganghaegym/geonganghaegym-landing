@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://landing.geonganghaegym.junghaebom.com/sitemap.xml

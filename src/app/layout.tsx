@@ -1,17 +1,19 @@
 import './globals.css';
 
 import type { Metadata, Viewport } from 'next';
-import Head from 'next/head';
 
-import { siteConfig } from '@/config';
+import { appConfig, siteConfig } from '@/config';
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
+    default: siteConfig.title,
     template: `%s - ${siteConfig.name}`,
   },
   metadataBase: new URL(siteConfig.url),
+  alternates: {
+    canonical: '/',
+  },
   description: siteConfig.description,
   keywords: [
     '건강해짐',
@@ -39,24 +41,23 @@ export const metadata: Metadata = {
     type: 'website',
     locale: siteConfig.locale,
     url: siteConfig.url,
-    title: siteConfig.name,
+    title: siteConfig.title,
     description: siteConfig.description,
     siteName: siteConfig.name,
     images: [
       {
         url: siteConfig.ogImage,
         width: 1200,
-        height: 630,
+        height: 600,
         alt: siteConfig.name,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: siteConfig.name,
+    title: siteConfig.title,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
-    creator: '@qextory',
   },
   robots: {
     index: true,
@@ -79,6 +80,18 @@ export const viewport: Viewport = {
   ],
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'MobileApplication',
+  name: siteConfig.name,
+  description: siteConfig.description,
+  url: siteConfig.url,
+  image: `${siteConfig.url}${siteConfig.ogImage}`,
+  operatingSystem: 'Android, iOS',
+  applicationCategory: 'HealthApplication',
+  sameAs: [appConfig.playStoreLink, appConfig.appStoreLink],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -86,10 +99,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='ko' suppressHydrationWarning>
-      <Head>
-        <link rel='icon' href='/favicon.png' sizes='any' />
-      </Head>
       <body className={cn('min-h-screen bg-background font-sans antialiased')}>
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
