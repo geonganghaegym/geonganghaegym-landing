@@ -60,6 +60,10 @@ export default function Home() {
             </div>
             <img
               src='/images/landing-section-01.webp'
+              width={600}
+              height={601}
+              loading='eager'
+              fetchPriority='high'
               alt='건강해짐 앱의 트레이너 홈 화면'
               className='relative w-[342px] lg:absolute lg:bottom-0 lg:right-0 lg:w-fit'
             />
@@ -69,6 +73,9 @@ export default function Home() {
           <div className='m-auto flex h-full max-w-[1140px] flex-col-reverse items-center lg:flex-row lg:items-end lg:justify-between'>
             <img
               src='/images/landing-section-02.webp'
+              width={488}
+              height={645}
+              loading='lazy'
               alt='PT 일정 예약·변경·취소를 관리하는 스케줄 화면'
               className='w-[360px] lg:w-fit'
             />
@@ -104,6 +111,9 @@ export default function Home() {
             </div>
             <img
               src='/images/landing-section-03.webp'
+              width={514}
+              height={541}
+              loading='lazy'
               alt='노쇼 시 수강권 횟수가 자동 차감되는 예약 정책 화면'
               className='w-[360px] lg:w-fit'
             />
@@ -113,6 +123,9 @@ export default function Home() {
           <div className='m-auto flex h-full max-w-[1140px] flex-col-reverse items-center lg:flex-row lg:items-end lg:justify-between'>
             <img
               src='/images/landing-section-04.webp'
+              width={630}
+              height={750}
+              loading='lazy'
               alt='회원별 진행 상황과 수강권 이용 내역을 보는 회원 관리 화면'
               className='w-[360px] lg:w-fit'
             />
@@ -147,6 +160,9 @@ export default function Home() {
             </div>
             <img
               src='/images/landing-section-05.webp'
+              width={630}
+              height={750}
+              loading='lazy'
               alt='수업일지·식단·운동기록을 남기는 회원 피드백 화면'
               className='w-[360px] lg:w-fit'
             />
@@ -156,6 +172,9 @@ export default function Home() {
           <div className='m-auto flex h-full max-w-[1140px] flex-col-reverse items-center lg:flex-row lg:items-end lg:justify-between'>
             <img
               src='/images/landing-section-06.webp'
+              width={630}
+              height={750}
+              loading='lazy'
               alt='포인트 리워드와 헬스장 커뮤니티 화면'
               className='w-[360px] lg:w-fit'
             />
