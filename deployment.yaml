@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: landing
+  labels:
+    app: landing
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: landing
+  template:
+    metadata:
+      labels:
+        app: landing
+    spec:
+      imagePullSecrets:
+        - name: ghcr-pull
+      securityContext:
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: landing
+          image: ghcr.io/geonganghaegym/geonganghaegym-landing:placeholder
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              name: http
+          resources:
+            requests:
+              cpu: 5m
+              memory: 16Mi
+            limits:
+              memory: 64Mi
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: [ALL]
+          volumeMounts:
+            # 루트 FS가 읽기 전용이라 nginx의 pid·임시 파일 자리를 따로 준다.
+            - name: tmp
+              mountPath: /tmp
+      volumes:
+        - name: tmp
+          emptyDir: {}
